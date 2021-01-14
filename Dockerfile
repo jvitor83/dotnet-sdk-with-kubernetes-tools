@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/sdk:3.1
+FROM mcr.microsoft.com/dotnet/sdk:${DOTNET_SDK_VERSION}
 
 # kubectl installation https://kubernetes.io/docs/tasks/tools/install-kubectl/
 RUN apt-get -o Acquire::Check-Valid-Until=false -o Acquire::Check-Date=false update && apt-get install -y apt-transport-https gnupg2 curl
